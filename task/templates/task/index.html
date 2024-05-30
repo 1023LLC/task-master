@@ -1,6 +1,17 @@
 {% extends 'task/base.html' %}
 
 {% block content %}
+
+    <div class="p-4 mb-6 bg-teal-200">
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button class="mt-4 py-2 px-6 bg-teal-800 text-white">Submit</button>
+        </form>
+    </div>
+
     <div class="space-y-4">
         {% for task in tasks %}
             <div class="p-4 bg-teal-400">
