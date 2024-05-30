@@ -1,0 +1,20 @@
+{% extends 'task/base.html' %}
+
+{% block content %}
+    <div class="space-y-4">
+        {% for task in tasks %}
+            <div class="p-4 bg-teal-400">
+                <h2 class="text-xl">{{ task.title }}</h2>
+
+                <p>
+                    {{ task.description }}
+                </p>
+
+                <div class="mt-6 flex flex-row items-center space-x-4">
+                    <a href="" class="py-2 px-6 bg-teal-800 text-white">Mark as done</a>
+                    <a href="" class="py-2 px-6 bg-amber-800 text-white">Mark as done</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
