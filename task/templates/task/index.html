@@ -23,7 +23,7 @@
 
                 <div class="mt-6 flex flex-row items-center space-x-4">
                     <a href="" class="py-2 px-6 bg-teal-800 text-white">Mark as done</a>
-                    <a href="" class="py-2 px-6 bg-amber-800 text-white">Mark as done</a>
+                    <a href="{% url 'task:delete_task' task.id %}" class="py-2 px-6 bg-amber-800 text-white">Delete</a>
                 </div>
             </div>
         {% endfor %}

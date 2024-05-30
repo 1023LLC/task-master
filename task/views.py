@@ -17,3 +17,10 @@ def index(request):
         
     tasks = Task.objects.filter(is_done=False)
     return render(request, 'task/index.html', {'tasks': tasks, 'form': form})
+
+
+def delete(request, task_id):
+    task = Task.objects.get(pk=task_id)
+    task.delete()
+    
+    return redirect('/')
